@@ -9,7 +9,7 @@ $description = mysqli_real_escape_string($conn, $_POST['description']);
 $sql = "SELECT * FROM user WHERE name='".$author."'";
 $result  = mysqli_query($conn, $sql);
 if($result->num_rows == 0){
-  $sql = "INSERT INTO user (name, password) VALUES('".$author."', 'bear0553')";
+  $sql = "INSERT INTO user (name, password) VALUES('".$author."', '비밀번호')";
   mysqli_query($conn, $sql);
   $user_id = mysqli_insert_id($conn);
 } else {
